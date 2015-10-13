@@ -6,6 +6,7 @@
  */
 
 use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\plugable_hooks\PlugableHook;
 
 /**
  * Implements hook_help().
@@ -24,10 +25,12 @@ function plugable_hooks_help($route_name, RouteMatchInterface $route_match) {
 }
 
 /**
- * Implements hook_theme().
+ * Implements hook_module_implements_alter().
  */
-function plugable_hooks_theme() {
-  $theme = [];
+function plugable_hooks_module_implements_alter(&$implementations, $hook) {
+  if (!$plug = PlugableHook::loadPlug($hook)) {
+    return;
+  }
 
-  return $theme;
+  dpm($plug);
 }

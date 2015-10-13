@@ -1,4 +1,4 @@
 services:
   plugin.manager.plugged_hook.processor:
-    class: Drupal\plugable_hooks\Plugin\PluggedHookManager
+    class: Drupal\plugable_hooks\PluggedHookManager
     parent: default_plugin_manager

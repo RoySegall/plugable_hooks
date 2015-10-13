@@ -12,7 +12,7 @@ use Drupal\Component\Annotation\Plugin;
 /**
  * Defines a Plugged hook item annotation object.
  *
- * @see \Drupal\plugable_hooks\Plugin\PluggedHookManager
+ * @see \Drupal\plugable_hooks\PluggedHookManager
  * @see plugin_api
  *
  * @Annotation

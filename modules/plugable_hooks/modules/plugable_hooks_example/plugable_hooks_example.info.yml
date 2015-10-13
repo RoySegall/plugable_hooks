@@ -1,0 +1,7 @@
+name: Plugable hooks example
+type: module
+description: Plugable example module
+core: 8.x
+package: Development
+dependencies:
+  - plugable_hooks

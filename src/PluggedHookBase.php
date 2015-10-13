@@ -14,6 +14,6 @@ use Drupal\Component\Plugin\PluginBase;
  */
 abstract class PluggedHookBase extends PluginBase implements PluggedHookInterface {
 
-  // Add common methods and abstract methods for your plugin type here.
+  abstract function invoke();
 
 }

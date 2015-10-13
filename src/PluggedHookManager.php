@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Contains Drupal\plugable_hooks\Plugin\PluggedHookManager.
+ * Contains Drupal\plugable_hooks\PluggedHookManager.
  */
 
 namespace Drupal\plugable_hooks;
