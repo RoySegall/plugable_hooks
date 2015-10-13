@@ -28,9 +28,9 @@ function plugable_hooks_help($route_name, RouteMatchInterface $route_match) {
  * Implements hook_module_implements_alter().
  */
 function plugable_hooks_module_implements_alter(&$implementations, $hook) {
-//  if (!$plug = PlugableHook::loadPlug($hook)) {
-//    return;
-//  }
-//
-//  dpm($plug);
+  if (!$plug = PlugableHook::loadPlug($hook)) {
+    return;
+  }
+
+  $plug->invoke($implementations);
 }
