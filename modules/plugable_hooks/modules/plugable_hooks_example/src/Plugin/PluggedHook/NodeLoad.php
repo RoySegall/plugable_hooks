@@ -9,7 +9,7 @@ use Drupal\plugable_hooks\PluggedHookBase;
  *  id = "node_view_alter"
  * )
  */
-class NodeLoad extends PluggedHookBase {
+class NodeLoad  extends PluggedHookBase {
 
   public function invoke() {
     dpm('a');

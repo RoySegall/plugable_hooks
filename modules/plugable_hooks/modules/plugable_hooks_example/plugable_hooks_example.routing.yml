@@ -1,6 +1,5 @@
-
 plugable_hooks_example.plugable_hook_example_index:
-  path: '/plugable_hooks_example/iview'
+  path: '/plugable_hooks_example/view'
   defaults:
     _controller: '\Drupal\plugable_hooks_example\Controller\PlugableHookExample::index'
     _title: 'Example'
