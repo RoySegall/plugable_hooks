@@ -1,0 +1,5 @@
+name: Plugable hooks
+type: module
+description: Create hook decleration through plugin defenition
+core: 8.x
+package: Development

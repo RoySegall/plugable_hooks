@@ -1,0 +1,33 @@
+<?php
+
+/**
+ * @file
+ * Contains plugable_hooks.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function plugable_hooks_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the plugable_hooks module.
+    case 'help.page.plugable_hooks':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Create hook decleration through plugin defenition') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function plugable_hooks_theme() {
+  $theme = [];
+
+  return $theme;
+}
