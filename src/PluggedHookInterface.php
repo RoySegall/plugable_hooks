@@ -12,8 +12,4 @@ use Drupal\Component\Plugin\PluginInspectionInterface;
 /**
  * Defines an interface for Plugged hook plugins.
  */
-interface PluggedHookInterface extends PluginInspectionInterface {
-
-  // Add get/set methods for your plugin type here.
-
-}
+interface PluggedHookInterface extends PluginInspectionInterface {}

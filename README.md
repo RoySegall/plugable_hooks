@@ -2,9 +2,9 @@
 
 Move naming convention callbacks function to OOP based.
 
-## For what this module good?
-This module can be useful for two reasons:
-  1. big MYMODULE.module file - When working with big project the module file 
+## Why I should use this module?
+You should this module due to two reasons:
+  1. big MYMODULE.module file - When working on a big project the module file 
      becomes huge. Moving the callback to small plugins could be much more easy 
      to maintain.
   2. Extended hooks base logic - Hooks can have big logic. Module can pass their

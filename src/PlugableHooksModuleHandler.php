@@ -20,20 +20,6 @@ class PlugableHooksModuleHandler extends ModuleHandler {
    */
   public function invokeAll($hook, array $args = array()) {
 
-    // todo: handle this issues:
-    /**
-     *     foreach ($this->moduleHandler()->getImplementations('entity_load') as $module) {
-    $function = $module . '_entity_load';
-    $function($entities, $this->entityTypeId);
-    }
-    // Call hook_TYPE_load().
-    foreach ($this->moduleHandler()->getImplementations($this->entityTypeId . '_load') as $module) {
-    $function = $module . '_' . $this->entityTypeId . '_load';
-    $function($entities);
-    }
-     */
-
-
     $return = parent::invokeAll($hook, $args);
 
     return $this->searchForMatchingHooks($hook, $args, $return);
@@ -43,9 +29,16 @@ class PlugableHooksModuleHandler extends ModuleHandler {
    * Search for matching plugins.
    *
    * @param $hook
+   *   The name of the hook.
    * @param $args
+   *   The args provided by the module invoker.
    * @param $return
+   *   The returned values of the parent class method.
    * @return array
+   *   An array of return values of the hook implementations. If modules return
+   *   arrays from their implementations, those are merged into one array
+   *   recursively. Note: integer keys in arrays will be lost, as the merge is
+   *   done using array_merge_recursive().
    */
   protected function searchForMatchingHooks($hook, $args, $return) {
     /** @var PluggedHookManager $plugin_manager */

@@ -29,7 +29,6 @@ class PluggedHookManager extends DefaultPluginManager {
    */
   public function __construct(\Traversable $namespaces, CacheBackendInterface $cache_backend, ModuleHandlerInterface $module_handler) {
     parent::__construct('Plugin/PluggedHook', $namespaces, $module_handler, NULL, 'Drupal\plugable_hooks\Annotation\PluggedHook');
-//    parent::__construct('Plugin/OgFields', $namespaces, $module_handler, NULL, 'Drupal\og\Annotation\OgFields');
 
     $this->alterInfo('plugable_hooks_plugged_hook_info');
     $this->setCacheBackend($cache_backend, 'plugable_hooks_plugged_hook_plugins');

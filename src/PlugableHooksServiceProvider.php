@@ -19,7 +19,6 @@ class PlugableHooksServiceProvider extends ServiceProviderBase {
    * {@inheritdoc}
    */
   public function alter(ContainerBuilder $container) {
-    // Overrides language_manager class to test domain language negotiation.
     $definition = $container->getDefinition('module_handler');
     $definition->setClass('\Drupal\plugable_hooks\PlugableHooksModuleHandler');
   }
