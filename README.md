@@ -3,9 +3,9 @@
 Move naming convention callbacks function to OOP based.
 
 ## Why I should use this module?
-You should this module due to two reasons:
-  1. big MYMODULE.module file - When working on a big project the module file 
-     becomes huge. Moving the callback to small plugins could be much more easy 
+This module can be useful for two reasons:
+  1. big MYMODULE.module file - When working with a big project the module file 
+     becomes huge. Moving the callback to small plugins could be much easier
      to maintain.
   2. Extended hooks base logic - Hooks can have big logic. Module can pass their
      hooks base logic into base classes and your plugin implementation could
@@ -38,6 +38,3 @@ class EntityAccess extends PluggedHookBase {
   }
 
 }
-
-
-```
